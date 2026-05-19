@@ -57,7 +57,7 @@ services:
         - type: bind
           source: ./docker/extra_settings
           target: /app/docker/extra_settings
-        - "defectdojo_media:${DD_MEDIA_ROOT:-/app/media}"
+        - defectdojo_media:/app/media
   celerybeat:
     image: "defectdojo/defectdojo-django:${DJANGO_VERSION:-latest}"
     depends_on:
